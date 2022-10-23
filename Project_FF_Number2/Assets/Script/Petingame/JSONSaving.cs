@@ -32,13 +32,13 @@ public class JSONSaving : MonoBehaviour
     public Text EngeryText;
     public Text HappyText;
 
-
+    
 
     public void Start()
     { 
-       
         SetPath();
         CreatePlayerData();
+
         if(petData == null) 
         {
             CreatePlayerData();
@@ -47,45 +47,10 @@ public class JSONSaving : MonoBehaviour
         else
         {
            LoadPlayerData();
-        }    
-
-
-        Button btnSave =SaveButton.GetComponent<Button>();
-        btnSave.onClick.AddListener(SaveData);
-        
-        Button btnDay =DayButton.GetComponent<Button>();
-        btnDay.onClick.AddListener(DayPlsu);
-        
-        Button btnNext =NextScene.GetComponent<Button>();
-        btnNext.onClick.AddListener(NextScen);
-        
-      //  Button btnBeforce =BeforceScene.GetComponent<Button>();
-     //   btnBeforce.onClick.AddListener(BeforeScen);
-
-        Button btnFood = FoodButton.GetComponent<Button>();
-        btnFood.onClick.AddListener(FoodStatus);
-
-        Button btnEngrgy = EngrgyButton.GetComponent<Button>();
-        btnEngrgy.onClick.AddListener(EngrgyStatus);
-
-        Button btnHappy = HappyButton.GetComponent<Button>();
-        btnHappy.onClick.AddListener(HappyStatus);
-
-         if(petData.food > 100) 
-        {
-            FullFood.SetActive(false);
-        }
-        if(petData.energy > 100) 
-        {
-        FullFood.SetActive(false);
-        }
-        if(petData.happy > 100) 
-        {
-            FullHappy.SetActive(false);
         }
 
-        
-        
+        CraetButton();      
+
     }
 
     
@@ -102,6 +67,25 @@ public class JSONSaving : MonoBehaviour
         persistenPath = Application.persistentDataPath + Path.AltDirectorySeparatorChar + "SaveData.json";
     }
 
+    private void CraetButton()
+    {
+        Button btnSave = SaveButton.GetComponent<Button>();
+        btnSave.onClick.AddListener(SaveData);
+        
+        Button btnDay = DayButton.GetComponent<Button>();
+        btnDay.onClick.AddListener(DayPlsu);
+        
+        Button btnNext = NextScene.GetComponent<Button>();
+        btnNext.onClick.AddListener(NextScen);
+        Button btnFood = FoodButton.GetComponent<Button>();
+        btnFood.onClick.AddListener(FoodStatus);
+
+        Button btnEngrgy = EngrgyButton.GetComponent<Button>();
+        btnEngrgy.onClick.AddListener(EngrgyStatus);
+
+        Button btnHappy = HappyButton.GetComponent<Button>();
+        btnHappy.onClick.AddListener(HappyStatus);
+    }
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.S))
@@ -115,22 +99,8 @@ public class JSONSaving : MonoBehaviour
         HappyText.text = petData.happy.ToString(); 
 
         
+        BTactionOnOff();              
         
-
-
-        if(petData.food <= 99) 
-        {
-            FullFood.SetActive(true);
-        }
-        if(petData.energy <= 99) 
-        {
-        FullEnergy.SetActive(true);
-        }
-        if(petData.happy <= 99) 
-        {
-            FullHappy.SetActive(true);
-        }
-
         if(petData.days == 30) 
         {
             petData.Re();
@@ -182,21 +152,19 @@ public class JSONSaving : MonoBehaviour
         DayText.text = petData.days.ToString();
 
          
-         if(petData.days == 2 ||petData.days == 4||petData.days == 6||petData.days == 8||petData.days == 10 ||petData.days == 12 ||petData.days == 14 ||petData.days == 16 ||petData.days == 18 ||petData.days == 20 ||petData.days == 22 ||petData.days == 24 ||petData.days == 26 ||petData.days == 28) 
+         if(petData.days % 2 == 0) 
         {
-         petData.food -=10;
-         FoodText.text = petData.food.ToString();
+            petData.food -=10;
+            FoodText.text = petData.food.ToString();
 
-         petData.energy -=10;
-         EngeryText.text = petData.energy.ToString();
+            petData.energy -=10;
+            EngeryText.text = petData.energy.ToString();
 
-         petData.happy -=10;
-         HappyText.text = petData.happy.ToString();
+            petData.happy -=10;
+            HappyText.text = petData.happy.ToString();
 
-        SaveData();
-
+            SaveData();
         }
-        
     }
 
     public void NextScen()
@@ -207,7 +175,7 @@ public class JSONSaving : MonoBehaviour
 //    public void BeforeScen()
 //    {
 //        SceneManager.LoadScene();
- //   }
+//   }
 
 public void FoodStatus() 
 {
@@ -251,9 +219,6 @@ public void EngrgyStatus()
         FullEnergy.SetActive(false);
     }
     SaveData();
-
-
-
 }
 
 public void HappyStatus()
@@ -277,12 +242,20 @@ public void HappyStatus()
     }
     SaveData();
 }
-    
-    
-   
-    
-    
-    
-    
-    
+
+public void BTactionOnOff()
+{
+    if(petData.food > 100) 
+        FullFood.SetActive(false);
+    else
+        FullFood.SetActive(true);
+    if(petData.energy > 100) 
+        FullFood.SetActive(false);
+    else
+        FullEnergy.SetActive(true);
+    if(petData.happy > 100) 
+        FullHappy.SetActive(false);
+    else
+        FullHappy.SetActive(true);
+}
 }

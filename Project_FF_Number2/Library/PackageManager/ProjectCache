@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638020934268423648
-    m_Hash: 607535227
+      ticks: 638021712046557797
+    m_Hash: 393195951
   m_LockFileStatus:
     m_FilePath: F:/Unity/FriendForever/Project_FF_Number2/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638020934268793633
-    m_Hash: 2775971162
+      ticks: 638021712046567843
+    m_Hash: 1385257640
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

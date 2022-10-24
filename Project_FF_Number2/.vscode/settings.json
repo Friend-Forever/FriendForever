@@ -52,6 +52,6 @@
         "temp/":true,
         "Temp/":true
     },
-    "vscode-pets.theme": "forest",
+    "vscode-pets.theme": "beach",
     "vscode-pets.position": "explorer"
 }

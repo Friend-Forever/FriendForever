@@ -345,6 +345,7 @@
 "Assets/Script/Petingame/Daydown.cs"
 "Assets/Script/Petingame/InputDay.cs"
 "Assets/Script/Petingame/JSONSaving.cs"
+"Assets/Script/Petingame/Manager.cs"
 "Assets/Script/Petingame/PetData.cs"
 "Assets/Script/Petingame/SaveOnline.cs"
 "Assets/Script/Petingame/StatusBar.cs"

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be430d1eddb886148a7c46fc699fbd2c, type: 3}
+  m_Name: New Characterdatabase
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: Cat
+    characterSprite: {fileID: 21300000, guid: 9250b325ed6960f408323aaec034b635, type: 3}
+  - characterName: Dog
+    characterSprite: {fileID: 21300000, guid: bcc2ab57020b60846bf6a7317574c86c, type: 3}

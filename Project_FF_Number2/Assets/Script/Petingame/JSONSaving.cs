@@ -125,7 +125,6 @@ public class JSONSaving : MonoBehaviour
         
         petData.SavePetData();
     }
-
     public void LoadData()
     {
         using StreamReader reader = new StreamReader(path);
@@ -145,7 +144,6 @@ public class JSONSaving : MonoBehaviour
         }
     }
     
-    
     public void DayPlsu()
     {
         petData.days += 1; 
@@ -154,13 +152,13 @@ public class JSONSaving : MonoBehaviour
          
          if(petData.days % 2 == 0) 
         {
-            petData.food -=10;
+            petData.food -= 10;
             FoodText.text = petData.food.ToString();
 
-            petData.energy -=10;
+            petData.energy -= 10;
             EngeryText.text = petData.energy.ToString();
 
-            petData.happy -=10;
+            petData.happy -= 10;
             HappyText.text = petData.happy.ToString();
 
             SaveData();

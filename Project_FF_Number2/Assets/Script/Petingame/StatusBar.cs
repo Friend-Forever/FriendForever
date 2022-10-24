@@ -9,7 +9,7 @@ public class StatusBar : MonoBehaviour
 
     void Start()
     {
-        petData.LoadPetData();
+        
     }
 
     void Update()

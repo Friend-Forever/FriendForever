@@ -47,6 +47,7 @@ public class JSONSaving : MonoBehaviour
        
         SetPath();
         CreatePlayerData();
+
         if(petData == null) 
         {
             CreatePlayerData();
@@ -57,7 +58,6 @@ public class JSONSaving : MonoBehaviour
            LoadPlayerData();
            petData.LoadPetData();
         }    
-
 
         Button btnSave =SaveButton.GetComponent<Button>();
         btnSave.onClick.AddListener(SaveData);
@@ -71,9 +71,6 @@ public class JSONSaving : MonoBehaviour
         Button btnNextSceneMiniGame = NextSceneMiniGame.GetComponent<Button>();
         btnNextSceneMiniGame.onClick.AddListener(NextScenMiniGame);
         
-      //  Button btnBeforce =BeforceScene.GetComponent<Button>();
-     //   btnBeforce.onClick.AddListener(BeforeScen);
-
         Button btnFood = FoodButton.GetComponent<Button>();
         btnFood.onClick.AddListener(FoodStatus);
 
@@ -86,7 +83,7 @@ public class JSONSaving : MonoBehaviour
         Button btnMoney = MoneyButton.GetComponent<Button>();
         btnMoney.onClick.AddListener(AddMoney);
 
-         if(petData.food > 100) 
+        if(petData.food > 100) 
         {
             FullFood.SetActive(false);
         }
@@ -123,11 +120,7 @@ public class JSONSaving : MonoBehaviour
         HealthyText.text = petData.healthy.ToString();
         MoneyText.text = petData.money.ToString();
 
-        FoodBarUpdate();
-        HappyBarUpdate();
-        HealthyBarUpdate();
-        EngeryBarUpdate();
-        
+        StatusBarUpdate();
 
 
         if(petData.food <= 99) 
@@ -151,6 +144,7 @@ public class JSONSaving : MonoBehaviour
              SceneManager.LoadScene(0);
             }
         }
+        
         if(petData.days == 1 || petData.energy >=64 ) 
         {
             Day_bt.SetActive(false);
@@ -159,6 +153,7 @@ public class JSONSaving : MonoBehaviour
         {
             Day_bt.SetActive(true);
         }
+
         if(petData.energy < 0) 
         {
             DayPlsu();
@@ -194,16 +189,6 @@ public class JSONSaving : MonoBehaviour
         petData.SavePetData();
     }
 
-    public void LoadData()
-    {
-        using StreamReader reader = new StreamReader(path);
-        string json = reader.ReadToEnd();
-
-        PetData data = JsonUtility.FromJson<PetData>(json);
-        Debug.Log(data.ToString());
-        
-        petData.LoadPetData();
-    }
     public void LoadPlayerData()
     {
           if (File.Exists(path))
@@ -248,14 +233,9 @@ public class JSONSaving : MonoBehaviour
         SaveData();
     }
     
-//    public void BeforeScen()
-//    {
-//        SceneManager.LoadScene();
- //   }
 
 public void FoodStatus() 
 {
-    
 
     petData.food +=20;
     FoodText.text = petData.food.ToString();
@@ -333,28 +313,12 @@ public void AddMoney()
     SaveData();
 }
 
-public void FoodBarUpdate()
+public void StatusBarUpdate()
 {
     FoodBar.fillAmount = petData.food / 100.0f;
-}
-public void HappyBarUpdate()
-{
     HappyBar.fillAmount = petData.happy / 100.0f;
-}
-public void HealthyBarUpdate()
-{
     HealthyBar.fillAmount = petData.healthy / 100.0f;
-}
-public void EngeryBarUpdate()
-{
     EngeryBar.fillAmount = petData.energy / 100.0f;
 }
-    
-    
-   
-    
-    
-    
-    
     
 }

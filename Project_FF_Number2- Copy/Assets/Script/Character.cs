@@ -6,6 +6,7 @@ using UnityEngine;
 public class Character 
 {
      public string characterName;
+     public GameObject characterGamePbject;
      public Sprite characterSprite;
 
 

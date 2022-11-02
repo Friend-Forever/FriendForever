@@ -92,6 +92,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
 -r:"F:/Programes/2021.3.10f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
 -r:"F:/Programes/2021.3.10f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
 -r:"F:/Programes/2021.3.10f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll"
@@ -279,6 +280,7 @@
 -r:"F:/Programes/2021.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.XRModule.dll"
 -r:"F:/Unity/FriendForever/Project_FF_Number2- Copy/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
 -r:"F:/Unity/FriendForever/Project_FF_Number2- Copy/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/2000b0aP.dag/Assembly-CSharp-firstpass.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.Services.Core.Environments.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.Services.Core.ref.dll"
@@ -299,15 +301,19 @@
 "Assets/Script/ONOFF.cs"
 "Assets/Script/Petingame/Minigame/ChangeScene.cs"
 "Assets/Script/Petingame/Minigame/Manager.cs"
+"Assets/Script/Petingame/ScenesGame/CharaterSelect.cs"
 "Assets/Script/Petingame/ScenesGame/Daydown.cs"
 "Assets/Script/Petingame/ScenesGame/InputDay.cs"
 "Assets/Script/Petingame/ScenesGame/JSONSaving.cs"
 "Assets/Script/Petingame/ScenesGame/LoadSavePetDataNextScenes.cs"
+"Assets/Script/Petingame/ScenesGame/Pet.cs"
 "Assets/Script/Petingame/ScenesGame/PetData.cs"
+"Assets/Script/Petingame/ScenesGame/PetDB.cs"
 "Assets/Script/Petingame/ScenesGame/StatusHunger.cs"
 "Assets/Script/PlayAudio.cs"
 "Assets/Script/Player.cs"
 "Assets/Script/Scroller.cs"
+"Assets/Unity.VisualScripting.Generated/VisualScripting.Core/AotStubs.cs"
 -langversion:9.0
 
 /deterministic

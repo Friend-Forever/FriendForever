@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character:
   - characterName: Cat
+    characterGamePbject: {fileID: 5400401960738051177, guid: 24a2621f4357e9b4d867be0fefe9caf7, type: 3}
     characterSprite: {fileID: 21300000, guid: 9250b325ed6960f408323aaec034b635, type: 3}
   - characterName: Dog
+    characterGamePbject: {fileID: 8996903485896450075, guid: 7c4bae93632b33d4abfecd0ad280f523, type: 3}
     characterSprite: {fileID: 21300000, guid: bcc2ab57020b60846bf6a7317574c86c, type: 3}

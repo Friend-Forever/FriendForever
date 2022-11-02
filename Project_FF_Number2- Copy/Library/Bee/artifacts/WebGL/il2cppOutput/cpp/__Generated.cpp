@@ -15,6 +15,8 @@ struct __Il2CppComDelegate_tD0DD2BBA6AC8F151D32B6DFD02F6BDA339F8DC4D;
 // System.__Il2CppComObject
 struct Il2CppComObject;
 
+IL2CPP_EXTERN_C const RuntimeMethod* __Il2CppComDelegate_Finalize_mC9F8EA94444C3AF0A43CC723A23EE4D8B7984F8C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* __Il2CppComObject_Finalize_m720B2062F661A0770A32D24B731AD4AFE314A5CD_RuntimeMethod_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -82,6 +84,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __Il2CppComObject_Finalize_m720B2062F661
 // System.Void System.__Il2CppComObject::Finalize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __Il2CppComObject_Finalize_m720B2062F661A0770A32D24B731AD4AFE314A5CD (Il2CppComObject* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&__Il2CppComObject_Finalize_m720B2062F661A0770A32D24B731AD4AFE314A5CD_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	StackTraceSentry _stackTraceSentry(__Il2CppComObject_Finalize_m720B2062F661A0770A32D24B731AD4AFE314A5CD_RuntimeMethod_var);
 	if (__this->identity != NULL)
 	{
 		il2cpp_codegen_il2cpp_com_object_cleanup(__this);
@@ -102,24 +111,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __Il2CppComObject_Finalize_m720B2062F661
 // System.Void System.__Il2CppComDelegate::Finalize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void __Il2CppComDelegate_Finalize_mC9F8EA94444C3AF0A43CC723A23EE4D8B7984F8C (__Il2CppComDelegate_tD0DD2BBA6AC8F151D32B6DFD02F6BDA339F8DC4D* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&__Il2CppComDelegate_Finalize_mC9F8EA94444C3AF0A43CC723A23EE4D8B7984F8C_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	StackTraceSentry _stackTraceSentry(__Il2CppComDelegate_Finalize_mC9F8EA94444C3AF0A43CC723A23EE4D8B7984F8C_RuntimeMethod_var);
 	__Il2CppComObject_Finalize_m720B2062F661A0770A32D24B731AD4AFE314A5CD(__this, NULL);
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

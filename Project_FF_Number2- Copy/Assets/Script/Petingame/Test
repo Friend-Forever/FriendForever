@@ -1,0 +1,53 @@
+//update character from petDB
+//
+// Path: Assets\Script\Petingame\Test
+// Compare this snippet from Assets\Script\Player.cs:
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+//
+// public class Player : MonoBehaviour
+// {
+//    public PetDB petDB;
+//    public GameObject Playerpet;
+//    private int selectedPet = 0;
+//     void Start()
+//     {
+//         selectedPet = PlayerPrefs.GetInt("Character", 0);
+//         Playerpet = Instantiate(petDB.pet[selectedPet].pet, transform.position, Quaternion.identity);
+//         Playerpet.transform.SetParent(transform);
+//         Load();
+//     }
+//     public void UpdateCharacter(int index)
+//     {
+//         selectedPet = index;
+//         PlayerPrefs.SetInt("Character", selectedPet);
+//         Destroy(Playerpet);
+//         Playerpet = Instantiate(petDB.pet[selectedPet].pet, transform.position, Quaternion.identity);
+//         Playerpet.transform.SetParent(transform);
+//         Save();
+//     }
+//
+//    private void Load()
+//      {
+//       selectedPet = PlayerPrefs.GetInt("selectedOption");
+//      }
+
+//     private void Save()
+//      {
+//       PlayerPrefs.SetInt("selectedOption", selectedPet);
+//      }
+
+//      void update()
+//      {
+//
+//      }
+//
+//
+// }
+//
+//update character from petDB
+//
+// Path: Assets\Script\Petingame\Test
+// Compare this snippet from Assets\Script\Player.cs:
+// using System.Collections;

@@ -12,6 +12,7 @@
 
 
 IL2CPP_EXTERN_C RuntimeClass* XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C const RuntimeMethod* XmlReader__cctor_m9FF3BD38D3644E099B8305E251679A77A0DF493E_RuntimeMethod_var;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -105,9 +106,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlReader__cctor_m9FF3BD38D3644E099B8305
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XmlReader__cctor_m9FF3BD38D3644E099B8305E251679A77A0DF493E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	StackTraceSentry _stackTraceSentry(XmlReader__cctor_m9FF3BD38D3644E099B8305E251679A77A0DF493E_RuntimeMethod_var);
 	{
 		((XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields*)il2cpp_codegen_static_fields_for(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_il2cpp_TypeInfo_var))->___IsTextualNodeBitmap_0 = ((int32_t)24600);
 		((XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields*)il2cpp_codegen_static_fields_for(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_il2cpp_TypeInfo_var))->___CanReadContentAsBitmap_1 = ((int32_t)123324);

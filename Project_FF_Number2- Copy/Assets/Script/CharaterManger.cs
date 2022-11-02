@@ -58,7 +58,7 @@ public class CharaterManger : MonoBehaviour
     private void UpdateCharacter(int selectedOption) 
     {
         Character character = characterDB.GetCharacter(selectedOption);
-        artworkSprite.sprite = character.characterSprite;
+        //artworkSprite = character.characterGamePbject
         nameText.text = character.characterName;
     }
 

@@ -4,36 +4,38 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-   public Characterdatabase characterDB;
-    public SpriteRenderer artworkSprite;
-
-    private int selectedOption = 0;
-
-
- void Start()
-    {
-        if(!PlayerPrefs.HasKey("selectedOption"))
-        {
-            selectedOption =0;
-        }
-        else
-        {
-            Load();
-        }
-
-        UpdateCharacter(selectedOption);
-    }
-
- private void UpdateCharacter(int selectedOption) 
-    {
-        Character character = characterDB.GetCharacter(selectedOption);
-        artworkSprite.sprite = character.characterSprite;
-        
-    }
-
-
-   private void Load()
+   public PetDB petDB;
+    public GameObject Playerpet;
+    private int selectedPet = 0;
+     void Start()
      {
-       selectedOption = PlayerPrefs.GetInt("selectedOption");
+        selectedPet = PlayerPrefs.GetInt("Character", 0);
+        Playerpet = Instantiate(petDB.GetPet(selectedPet).pet, transform.position, Quaternion.identity);
+        Playerpet.transform.SetParent(transform);
+
+        UpdateCharacter(selectedPet);
      }
+     public void UpdateCharacter(int selectedOption)
+     {
+        selectedPet = selectedOption;
+        PlayerPrefs.SetInt("Character", selectedPet);
+        Destroy(Playerpet);
+        Playerpet = Instantiate(petDB.GetPet(selectedPet).pet, transform.position, Quaternion.identity);
+        Playerpet.transform.SetParent(transform);
+        Save();
+     }
+
+    private void Load()
+      {
+        selectedPet = PlayerPrefs.GetInt("Character", 0);
+      }
+     private void Save()
+      {
+        PlayerPrefs.SetInt("Character", selectedPet);
+      }
+     void update()
+     {
+       Debug.Log(selectedPet);
+     }
+    
 }
